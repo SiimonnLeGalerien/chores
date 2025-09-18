@@ -55,6 +55,23 @@ public class Main {
 									System.err.println("Usage: chore set <progress|todo|finished> <id>");
 									break;
 							}
+							break;
+						case "search":
+							switch (args[2]) {
+								case "finished":
+									manager.searchTitlesFinished(args[3]);
+									break;
+								case "progress":
+									manager.searchTitlesInProgress(args[3]);
+									break;
+								case "todo":
+									manager.searchTitlesInProgress(args[3]);
+									break;
+								default:
+									manager.searchTitlesInProgress(args[2]);
+									break;
+							}
+							break;
 					}
 				} catch (Exception e) {
 					System.err.println(e.getMessage());
