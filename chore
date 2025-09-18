@@ -1,0 +1,2 @@
+#!/bin/bash
+java -jar ~/.local/lib/chore/chore.jar ~/.local/lib/chore/chores.csv "$@"
