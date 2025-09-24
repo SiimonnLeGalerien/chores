@@ -18,18 +18,22 @@ public class TaskManager {
 	}
 
 	public void printInProgress() {
+		System.out.println("TODO :\n");
 		if (inProgress.size() == 0)
 			System.out.println("No task todo...");
 		for (int i = 0; i < inProgress.size(); i++) {
 			System.out.println(Integer.valueOf(i).toString() + " : " + inProgress.get(i).toString());
 		}
+		System.out.println();
 	}
 	public void printFinished() {
+		System.out.println("Finished :\n");
 		if (finished.size() == 0)
 			System.out.println("No task finished...");
 		for (int i = 0; i < finished.size(); i++) {
 			System.out.println(Integer.valueOf(i).toString() + " : " + finished.get(i).toString());
 		}
+		System.out.println();
 	}
 
 	public void setFinishedById(int id) {

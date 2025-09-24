@@ -19,8 +19,11 @@ public class Main {
 								case "finished":
 									manager.printFinished();
 									break;
+								case "done":
+									manager.printFinished();
+									break;
 								default:
-									System.err.println("Usage: chore print <todo|progress|finished>");
+									System.err.println("Usage: chore print <todo|progress|finished|Done>");
 									break;
 							}
 							break;
@@ -35,6 +38,9 @@ public class Main {
 								case "finished":
 									manager.removeFinishedById(Integer.parseInt(args[3]));
 									break;
+								case "done":
+									manager.removeFinishedById(Integer.parseInt(args[3]));
+									break;
 								default:
 									manager.removeInProgressById(Integer.parseInt(args[2]));
 									break;
@@ -43,6 +49,9 @@ public class Main {
 						case "set":
 							switch (args[2]) {
 								case "finished":
+									manager.setFinishedById(Integer.parseInt(args[3]));
+									break;
+								case "done":
 									manager.setFinishedById(Integer.parseInt(args[3]));
 									break;
 								case "progress":
@@ -59,6 +68,9 @@ public class Main {
 						case "search":
 							switch (args[2]) {
 								case "finished":
+									manager.searchTitlesFinished(args[3]);
+									break;
+								case "done":
 									manager.searchTitlesFinished(args[3]);
 									break;
 								case "progress":
